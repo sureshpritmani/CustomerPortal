@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+    <http:listener-config name="customer-profile-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <apikit:config name="customer-profile-config" raml="customer-profile.raml" consoleEnabled="false" doc:name="Router"/>
+    <flow name="customer-profile-main">
+        <http:listener config-ref="customer-profile-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
+        <apikit:router config-ref="customer-profile-config" doc:name="APIkit Router"/>
+        <exception-strategy ref="customer-profile-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="customer-profile-console">
+        <http:listener config-ref="customer-profile-httpListenerConfig" path="/console/*" doc:name="HTTP"/>
+        <apikit:console config-ref="customer-profile-config" doc:name="APIkit Console"/>
+    </flow>
+    <flow name="put:/customer/{customerId}:customer-profile-config">
+        <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+        <set-payload value="{&quot;message&quot;:&quot;Customer Profile updated successfully.&quot;}" doc:name="Set Payload"/>
+    </flow>
+    <flow name="delete:/customer/{customerId}:customer-profile-config">
+        <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+        <set-payload value="{&quot;message&quot;:&quot;Customer Profile removed successfully.&quot;}" doc:name="Set Payload"/>
+    </flow>
+    <flow name="get:/customer:customer-profile-config">
+        <set-payload value="{&#xD;&#xA;  &quot;Customers&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;CustomerId&quot;: 1,&#xD;&#xA;      &quot;FirstName&quot;: &quot;James_1&quot;,&#xD;&#xA;      &quot;LastName&quot;: &quot;Russ_1&quot;,&#xD;&#xA;      &quot;City&quot;: &quot;Sydney&quot;,&#xD;&#xA;      &quot;Country&quot;: &quot;Australia&quot;,&#xD;&#xA;      &quot;PostCode&quot;: &quot;2001&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;CustomerId&quot;: 2,&#xD;&#xA;      &quot;FirstName&quot;: &quot;James_2&quot;,&#xD;&#xA;      &quot;LastName&quot;: &quot;Russ_2&quot;,&#xD;&#xA;      &quot;City&quot;: &quot;Melbourne&quot;,&#xD;&#xA;      &quot;Country&quot;: &quot;Australia&quot;,&#xD;&#xA;      &quot;PostCode&quot;: &quot;2002&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;CustomerId&quot;: 3,&#xD;&#xA;      &quot;FirstName&quot;: &quot;James_3&quot;,&#xD;&#xA;      &quot;LastName&quot;: &quot;Russ_3&quot;,&#xD;&#xA;      &quot;City&quot;: &quot;Perth&quot;,&#xD;&#xA;      &quot;Country&quot;: &quot;Australia&quot;,&#xD;&#xA;      &quot;PostCode&quot;: &quot;2003&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;CustomerId&quot;: 4,&#xD;&#xA;      &quot;FirstName&quot;: &quot;James_4&quot;,&#xD;&#xA;      &quot;LastName&quot;: &quot;Russ_4&quot;,&#xD;&#xA;      &quot;City&quot;: &quot;Adelaide&quot;,&#xD;&#xA;      &quot;Country&quot;: &quot;Australia&quot;,&#xD;&#xA;      &quot;PostCode&quot;: &quot;2004&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;CustomerId&quot;: 5,&#xD;&#xA;      &quot;FirstName&quot;: &quot;James_5&quot;,&#xD;&#xA;      &quot;LastName&quot;: &quot;Russ_5&quot;,&#xD;&#xA;      &quot;City&quot;: &quot;Canberra&quot;,&#xD;&#xA;      &quot;Country&quot;: &quot;Australia&quot;,&#xD;&#xA;      &quot;PostCode&quot;: &quot;2005&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;CustomerId&quot;: 6,&#xD;&#xA;      &quot;FirstName&quot;: &quot;James_6&quot;,&#xD;&#xA;      &quot;LastName&quot;: &quot;Russ_6&quot;,&#xD;&#xA;      &quot;City&quot;: &quot;Gold Coast&quot;,&#xD;&#xA;      &quot;Country&quot;: &quot;Australia&quot;,&#xD;&#xA;      &quot;PostCode&quot;: &quot;2006&quot;&#xD;&#xA;    }&#xD;&#xA;  ]&#xD;&#xA;}" doc:name="Set Payload"/>
+    </flow>
+    <flow name="get:/customer/{customerId}:customer-profile-config">
+        <set-payload value="{&quot;FirstName&quot;:&quot;James&quot;, &quot;LastName&quot;:&quot;Russ&quot;, &quot;City&quot;:&quot;Sydney&quot;, &quot;Country&quot;:&quot;Australia&quot;, &quot;PostCode&quot;:&quot;2000&quot;}" doc:name="Set Payload"/>
+    </flow>
+    <flow name="post:/customer:customer-profile-config">
+        <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+        <set-payload value="{&quot;message&quot;:&quot;New Customer Profile created successfully.&quot;}" doc:name="Set Payload"/>
+    </flow>
+    <apikit:mapping-exception-strategy name="customer-profile-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property"/>
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload"/>
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+</mule>

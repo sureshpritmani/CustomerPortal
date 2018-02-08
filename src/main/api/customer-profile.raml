@@ -1,0 +1,56 @@
+#%RAML 1.0
+baseUri: http://127.0.0.1:8081/api
+title: Customer Portal
+version: 1.0
+
+/customer:
+  get:
+    description: "Get List of all Customers"
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: !include /examples/Customer_Profile_List.json
+              
+
+  post:
+    description: "Create new Customer Profile"
+    body: 
+      application/json:
+        example: !include /examples/New_Customer.json
+          
+    responses: 
+      201:
+        body: 
+          application/json:
+            example: !include /examples/Insert_Customer_Success_Message.json
+              
+    
+  /{customerId}:
+    get:
+      description: "Retrieve Customer Details using Customer ID"
+      responses: 
+        200:
+          body: 
+            application/json:
+              example: !include /examples/Customer_Example.json
+    
+    put:
+      description: "Update Customer Profile using Customer ID"
+      body: 
+        application/json:
+          example: !include /examples/Update_Customer_Profile.json
+            
+      responses: 
+        202:
+          body: 
+            application/json:
+              example: !include /examples/Update_Customer_Success_Message.json
+                
+    delete:
+      description: "Delete Customer Profile using Customer ID"     
+      responses: 
+        202:
+          body: 
+            application/json:
+              example: !include /examples/Delete_Customer_Success_Message.json

@@ -1,0 +1,331 @@
+<metadata__cache__entry>
+  <version>5.2.0.0</version>
+  <connectorName>HTTP_Request_Configuration</connectorName>
+  <metadataIo class="tree-map">
+    <entry>
+      <string>GET:/customer</string>
+      <map>
+        <entry>
+          <string>__default__</string>
+          <org.mule.tooling.metadata.cache.DefaultMetadataCacheEntry>
+            <input class="org.mule.common.metadata.DefaultMetaData">
+              <payload class="org.mule.common.metadata.DefaultUnknownMetaDataModel">
+                <dataType>UNKNOWN</dataType>
+                <metaDataModelPropertiesManager>
+                  <properties/>
+                </metaDataModelPropertiesManager>
+              </payload>
+              <properties class="tree-map">
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+              </properties>
+            </input>
+            <output class="org.mule.common.metadata.DefaultMetaData">
+              <payload class="org.mule.common.metadata.DefaultUnknownMetaDataModel">
+                <dataType>UNKNOWN</dataType>
+                <metaDataModelPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+                      <exampleContent>{&#xd;
+  &quot;Customers&quot;: [&#xd;
+    {&#xd;
+      &quot;CustomerId&quot;: 1,&#xd;
+      &quot;FirstName&quot;: &quot;James_1&quot;,&#xd;
+      &quot;LastName&quot;: &quot;Russ_1&quot;,&#xd;
+      &quot;City&quot;: &quot;Sydney&quot;,&#xd;
+      &quot;Country&quot;: &quot;Australia&quot;,&#xd;
+      &quot;PostCode&quot;: &quot;2001&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;CustomerId&quot;: 2,&#xd;
+      &quot;FirstName&quot;: &quot;James_2&quot;,&#xd;
+      &quot;LastName&quot;: &quot;Russ_2&quot;,&#xd;
+      &quot;City&quot;: &quot;Melbourne&quot;,&#xd;
+      &quot;Country&quot;: &quot;Australia&quot;,&#xd;
+      &quot;PostCode&quot;: &quot;2002&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;CustomerId&quot;: 3,&#xd;
+      &quot;FirstName&quot;: &quot;James_3&quot;,&#xd;
+      &quot;LastName&quot;: &quot;Russ_3&quot;,&#xd;
+      &quot;City&quot;: &quot;Perth&quot;,&#xd;
+      &quot;Country&quot;: &quot;Australia&quot;,&#xd;
+      &quot;PostCode&quot;: &quot;2003&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;CustomerId&quot;: 4,&#xd;
+      &quot;FirstName&quot;: &quot;James_4&quot;,&#xd;
+      &quot;LastName&quot;: &quot;Russ_4&quot;,&#xd;
+      &quot;City&quot;: &quot;Adelaide&quot;,&#xd;
+      &quot;Country&quot;: &quot;Australia&quot;,&#xd;
+      &quot;PostCode&quot;: &quot;2004&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;CustomerId&quot;: 5,&#xd;
+      &quot;FirstName&quot;: &quot;James_5&quot;,&#xd;
+      &quot;LastName&quot;: &quot;Russ_5&quot;,&#xd;
+      &quot;City&quot;: &quot;Canberra&quot;,&#xd;
+      &quot;Country&quot;: &quot;Australia&quot;,&#xd;
+      &quot;PostCode&quot;: &quot;2005&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;CustomerId&quot;: 6,&#xd;
+      &quot;FirstName&quot;: &quot;James_6&quot;,&#xd;
+      &quot;LastName&quot;: &quot;Russ_6&quot;,&#xd;
+      &quot;City&quot;: &quot;Gold Coast&quot;,&#xd;
+      &quot;Country&quot;: &quot;Australia&quot;,&#xd;
+      &quot;PostCode&quot;: &quot;2006&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</exampleContent>
+                    </org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+                    <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+                      <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                        <id>GET:/customer_response</id>
+                        <displayName>GET:/customer_response</displayName>
+                        <category>DEFAULT</category>
+                        <metaDataKeyPropertiesManager>
+                          <properties>
+                            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                          </properties>
+                        </metaDataKeyPropertiesManager>
+                      </metaDataKey>
+                      <derivedStructure>false</derivedStructure>
+                      <generatedStructure>false</generatedStructure>
+                    </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+                  </properties>
+                </metaDataModelPropertiesManager>
+              </payload>
+              <properties class="tree-map">
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+              </properties>
+            </output>
+          </org.mule.tooling.metadata.cache.DefaultMetadataCacheEntry>
+        </entry>
+      </map>
+    </entry>
+    <entry>
+      <string>PUT:/customer/{customerId}</string>
+      <map>
+        <entry>
+          <string>__default__</string>
+          <org.mule.tooling.metadata.cache.DefaultMetadataCacheEntry>
+            <input class="org.mule.common.metadata.DefaultMetaData">
+              <payload class="org.mule.common.metadata.DefaultUnknownMetaDataModel">
+                <dataType>UNKNOWN</dataType>
+                <metaDataModelPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+                      <exampleContent>{&quot;FirstName&quot;:&quot;James&quot;, &quot;LastName&quot;:&quot;Russ&quot;, &quot;City&quot;:&quot;Sydney&quot;, &quot;Country&quot;:&quot;Sydney&quot;, &quot;PostCode&quot;:&quot;2000&quot;}</exampleContent>
+                    </org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+                    <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+                      <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                        <id>PUT:/customer/{customerId}_request</id>
+                        <displayName>PUT:/customer/{customerId}_request</displayName>
+                        <category>DEFAULT</category>
+                        <metaDataKeyPropertiesManager>
+                          <properties>
+                            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                          </properties>
+                        </metaDataKeyPropertiesManager>
+                      </metaDataKey>
+                      <derivedStructure>false</derivedStructure>
+                      <generatedStructure>false</generatedStructure>
+                    </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+                  </properties>
+                </metaDataModelPropertiesManager>
+              </payload>
+              <properties class="tree-map">
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+              </properties>
+            </input>
+            <output class="org.mule.common.metadata.DefaultMetaData">
+              <payload class="org.mule.common.metadata.DefaultUnknownMetaDataModel">
+                <dataType>UNKNOWN</dataType>
+                <metaDataModelPropertiesManager>
+                  <properties>
+                    <org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+                      <exampleContent>{&quot;message&quot;:&quot;Customer Profile updated successfully.&quot;}</exampleContent>
+                    </org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty>
+                    <org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+                      <metaDataKey class="org.mule.common.metadata.DefaultMetaDataKey">
+                        <id>PUT:/customer/{customerId}_response</id>
+                        <displayName>PUT:/customer/{customerId}_response</displayName>
+                        <category>DEFAULT</category>
+                        <metaDataKeyPropertiesManager>
+                          <properties>
+                            <org.mule.common.metadata.key.property.dsql.DsqlFromMetaDataKeyProperty/>
+                          </properties>
+                        </metaDataKeyPropertiesManager>
+                      </metaDataKey>
+                      <derivedStructure>false</derivedStructure>
+                      <generatedStructure>false</generatedStructure>
+                    </org.mule.common.metadata.property.StructureIdentifierMetaDataModelProperty>
+                  </properties>
+                </metaDataModelPropertiesManager>
+              </payload>
+              <properties class="tree-map">
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields class="sorted-set">
+                      <comparator class="org.mule.common.metadata.MetaDataProperties$MetaDataFieldComparator"/>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+              </properties>
+            </output>
+          </org.mule.tooling.metadata.cache.DefaultMetadataCacheEntry>
+        </entry>
+      </map>
+    </entry>
+  </metadataIo>
+</metadata__cache__entry>

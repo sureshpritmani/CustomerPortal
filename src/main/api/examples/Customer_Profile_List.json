@@ -1,0 +1,52 @@
+{
+  "Customers": [
+    {
+      "CustomerId": 1,
+      "FirstName": "James_1",
+      "LastName": "Russ_1",
+      "City": "Sydney",
+      "Country": "Australia",
+      "PostCode": "2001"
+    },
+    {
+      "CustomerId": 2,
+      "FirstName": "James_2",
+      "LastName": "Russ_2",
+      "City": "Melbourne",
+      "Country": "Australia",
+      "PostCode": "2002"
+    },
+    {
+      "CustomerId": 3,
+      "FirstName": "James_3",
+      "LastName": "Russ_3",
+      "City": "Perth",
+      "Country": "Australia",
+      "PostCode": "2003"
+    },
+    {
+      "CustomerId": 4,
+      "FirstName": "James_4",
+      "LastName": "Russ_4",
+      "City": "Adelaide",
+      "Country": "Australia",
+      "PostCode": "2004"
+    },
+    {
+      "CustomerId": 5,
+      "FirstName": "James_5",
+      "LastName": "Russ_5",
+      "City": "Canberra",
+      "Country": "Australia",
+      "PostCode": "2005"
+    },
+    {
+      "CustomerId": 6,
+      "FirstName": "James_6",
+      "LastName": "Russ_6",
+      "City": "Gold Coast",
+      "Country": "Australia",
+      "PostCode": "2006"
+    }
+  ]
+}
