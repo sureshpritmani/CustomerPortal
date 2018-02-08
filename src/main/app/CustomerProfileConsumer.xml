@@ -13,10 +13,10 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
     </http:request-config>
     <flow name="CustomerProfilePeriodicCallFlow">
         <poll doc:name="Poll">
-            <fixed-frequency-scheduler frequency="10" timeUnit="SECONDS"/>
-            <http:request config-ref="HTTP_Request_Configuration" path="/customer" method="GET" doc:name="HTTP Request"/>
+            <fixed-frequency-scheduler frequency="5" timeUnit="MINUTES"/>
+            <http:request config-ref="HTTP_Request_Configuration" path="/customers" method="GET" doc:name="HTTP Request"/>
         </poll>
         <logger message="#[payload]" level="INFO" doc:name="Logger"/>
-        <file:outbound-endpoint path="C:\Temp" outputPattern="customer_list.json" responseTimeout="10000" doc:name="Customer List Periodic Update"/>
+        <file:outbound-endpoint path="C:\Temp" outputPattern="Customer_Profile_List.json" responseTimeout="10000" doc:name="Customer List Periodic Update"/>
     </flow>
 </mule>
